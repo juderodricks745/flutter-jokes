@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ButtonWithEvent extends StatelessWidget {
   const ButtonWithEvent({
@@ -10,12 +11,13 @@ class ButtonWithEvent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialButton(
         child: Container(
           height: 50,
           width: double.infinity,
           decoration: BoxDecoration(
-              color: Colors.blue,
+              color: context.theme.buttonColor,
               borderRadius:
               const BorderRadius.all(Radius.circular(20))),
           alignment: Alignment.center,

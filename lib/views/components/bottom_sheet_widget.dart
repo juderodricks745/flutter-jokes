@@ -17,9 +17,9 @@ class GenericBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     JokeController controller = Get.find();
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        color: context.theme.backgroundColor
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20, top: 20),

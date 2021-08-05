@@ -7,6 +7,7 @@ import 'package:jokes_app/data/joke_exception.dart';
 import 'package:jokes_app/model/data_item.dart';
 import 'package:jokes_app/model/joke.dart';
 import 'package:jokes_app/model/joke_state.dart';
+import 'package:jokes_app/views/theme/Themes.dart';
 
 class JokeController extends GetxController {
   JokeController({required this.client});
@@ -85,6 +86,10 @@ class JokeController extends GetxController {
       _visible.value = false;
       _state.value = JokeState.error(response.message);
     }
+  }
+
+  void changeTheme() {
+    Get.isDarkMode ? Get.changeTheme(Themes.light) : Get.changeTheme(Themes.dark);
   }
 }
 

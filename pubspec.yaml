@@ -12,7 +12,6 @@ dependencies:
     sdk: flutter
   get: ^4.1.4
   http: ^0.13.3
-  path_provider: ^2.0.2
   delayed_widget: ^1.1.1
   freezed_annotation:
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controller/jokes_controller.dart';
 import '/views/components/custom_widgets.dart';
+import '../controller/jokes_controller.dart';
 
 class JokeScreen extends GetView<JokeController> {
   const JokeScreen({Key? key}) : super(key: key);
@@ -15,6 +15,17 @@ class JokeScreen extends GetView<JokeController> {
         // Back button was being displayed even though not added
         automaticallyImplyLeading: false,
         actions: [
+          Obx(() => controller.visible
+              ? GestureDetector(
+                  child: Icon(
+                    Get.isDarkMode ? Icons.nightlight_round : Icons.wb_sunny_rounded,
+                    color: Colors.white,
+                    size: 25,
+                  ),
+                  onTapDown: (value) => {controller.changeTheme()},
+                )
+              : Container()),
+          SizedBox(width: 10),
           // Hide Settings icon, when a Joke is being fetched.
           Obx(
             () => controller.visible
