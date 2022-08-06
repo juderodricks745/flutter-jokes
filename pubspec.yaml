@@ -10,9 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get: ^4.1.4
-  http: ^0.13.3
-  delayed_widget: ^1.1.1
+  get: ^4.6.5
+  http: ^0.13.5
+  delayed_widget: ^1.1.2
   freezed_annotation:
 
 dev_dependencies:
